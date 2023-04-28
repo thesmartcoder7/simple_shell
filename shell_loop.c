@@ -44,16 +44,14 @@ char *without_comment(char *input)
 
 void shell_loop(data_pool *data)
 {
-	int loop, mk_eof, length;
-	char *input, *prompt;
+	int loop, mk_eof;
+	char *input;
 
-	prompt = _strcat(getlogin(), "@shell$ ");
-	length = _strlen(_strcat(getlogin(), "@shell$ "));
 	loop = 1;
 
 	while (loop == 1)
 	{
-		write(STDOUT_FILENO, prompt, length);
+		write(STDOUT_FILENO, "#Simple_Shell$ ", 15);
 		input = read_line(&mk_eof);
 		if (mk_eof != -1)
 		{

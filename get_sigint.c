@@ -8,11 +8,6 @@
  */
 void get_sigint(int signal)
 {
-	char *prompt;
-	int length;
 	(void)signal;
-
-	prompt = _strcat(getlogin(), "@shell$ ");
-	length = _strlen(_strcat(getlogin(), "@shell$ "));
-	write(STDOUT_FILENO, prompt, length);
+	write(STDOUT_FILENO, "\n#Simple_Shell$ ", 15);
 }
