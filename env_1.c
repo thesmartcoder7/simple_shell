@@ -61,7 +61,7 @@ char *_getenv(const char *name, char **_environ)
  * @data_st: data relevant.
  * Return: 1 on success.
  */
-int _env(data_shell *data_st)
+int _env(data_pool *data_st)
 {
 	int i, j;
 

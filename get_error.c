@@ -6,7 +6,7 @@
  * @error_val: error value
  * Return: error
  */
-int get_error(data_shell *data_st, int error_val)
+int get_error(data_pool *data_st, int error_val)
 {
 	char *error;
 

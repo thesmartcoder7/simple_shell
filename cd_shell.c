@@ -6,7 +6,7 @@
  * @dss: data relevant
  * Return: 1 on success
  */
-int cd_shell(data_shell *dss)
+int cd_shell(data_pool *dss)
 {
 	char *dir;
 	int ishome, ishome2, isddash;

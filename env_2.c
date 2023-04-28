@@ -9,7 +9,7 @@
  * Return: no return
  */
 
-void set_env(char *alias, char *a_value, data_shell *d_st)
+void set_env(char *alias, char *a_value, data_pool *d_st)
 {
 	int i;
 	char *var_env, *alias_env;
@@ -40,7 +40,7 @@ void set_env(char *alias, char *a_value, data_shell *d_st)
  *
  * Return: 1 on success.
  */
-int _setenv(data_shell *data_st)
+int _setenv(data_pool *data_st)
 {
 
 	if (data_st->args[1] == NULL || data_st->args[2] == NULL)
@@ -61,7 +61,7 @@ int _setenv(data_shell *data_st)
  *
  * Return: 1 on success.
  */
-int _unsetenv(data_shell *data_st)
+int _unsetenv(data_pool *data_st)
 {
 	char **realloc_env;
 	char *var_env, *name_env;
@@ -128,4 +128,3 @@ char *copy_info(char *alias, char *a_value)
 
 	return (new);
 }
-

@@ -5,7 +5,7 @@
  * @data_st: data structure (args and input)
  * Return: Return 0
 */
-int get_help(data_shell *data_st)
+int get_help(data_pool *data_st)
 {
 
 	if (data_st->args[1] == 0)

@@ -39,19 +39,21 @@ char *without_comment(char *input)
 /**
  * shell_loop - Loop of shell
  * @data: data relevant (av, input, args)
- *
  * Return: no return.
  */
 
-void shell_loop(data_shell *data)
+void shell_loop(data_pool *data)
 {
-	int loop, mk_eof;
-	char *input;
+	int loop, mk_eof, length;
+	char *input, *prompt;
 
+	prompt = _strcat(getlogin(), "@shell$ ");
+	length = _strlen(_strcat(getlogin(), "@shell$ "));
 	loop = 1;
+
 	while (loop == 1)
 	{
-		write(STDIN_FILENO, "#Simple_Shell$ ", 15);
+		write(STDOUT_FILENO, prompt, length);
 		input = read_line(&mk_eof);
 		if (mk_eof != -1)
 		{

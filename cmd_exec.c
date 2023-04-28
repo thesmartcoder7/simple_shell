@@ -6,7 +6,7 @@
  * @data: data relevant (args and input)
  * Return: 1 on success.
  */
-int cmd_exec(data_shell *data)
+int cmd_exec(data_pool *data)
 {
 	pid_t pd;
 	pid_t wpd;
@@ -129,7 +129,7 @@ char *_which(char *cmd, char **ss_env)
  * @datash: data structure
  * Return: 0 if is not an executable, other number if it does
  */
-int check_executable(data_shell *datash)
+int check_executable(data_pool *datash)
 {
 	struct stat st;
 	int i;
@@ -175,7 +175,7 @@ int check_executable(data_shell *datash)
  * @datash: data structure
  * Return: 1 if there is an error, 0 if not
  */
-int check_error_cmd(char *dir, data_shell *datash)
+int check_error_cmd(char *dir, data_pool *datash)
 {
 	if (dir == NULL)
 	{

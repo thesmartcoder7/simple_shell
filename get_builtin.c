@@ -5,7 +5,7 @@
  * @ss_cmd: command
  * Return: function pointer of the builtin command
  */
-int (*get_builtin(char *ss_cmd))(data_shell *)
+int (*get_builtin(char *ss_cmd))(data_pool *)
 {
 	builtin_t builtin[] = {
 		{ "env", _env },

@@ -6,7 +6,7 @@
  * @datash: data relevant (status and args)
  * Return: 0 on success.
  */
-int exit_shell(data_shell *datash)
+int exit_shell(data_pool *datash)
 {
 	unsigned int ustatus;
 	int is_digit;

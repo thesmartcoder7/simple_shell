@@ -9,7 +9,7 @@
  * Return: no return
  */
 
-void check_env(r_var **h, char *in, data_shell *data)
+void check_env(r_var **h, char *in, data_pool *data)
 {
 	int row, chr, j, lval;
 	char **_envr;
@@ -34,6 +34,8 @@ void check_env(r_var **h, char *in, data_shell *data)
 	}
 
 	for (j = 0; in[j]; j++)
+
+/* get_help.c */
 	{
 		if (in[j] == ' ' || in[j] == '\t' || in[j] == ';' || in[j] == '\n')
 			break;
@@ -51,7 +53,7 @@ void check_env(r_var **h, char *in, data_shell *data)
  * @data: data structure
  * Return: no return
  */
-int check_vars(r_var **h, char *in, char *st, data_shell *data)
+int check_vars(r_var **h, char *in, char *st, data_pool *data)
 {
 	int i, lst, lpd;
 
@@ -143,7 +145,7 @@ char *replaced_input(r_var **head, char *input, char *new_input, int mk_len)
  * @data_st: data structure
  * Return: replaced string
  */
-char *rep_var(char *input, data_shell *data_st)
+char *rep_var(char *input, data_pool *data_st)
 {
 	r_var *head, *indx;
 	char *status, *new_input;

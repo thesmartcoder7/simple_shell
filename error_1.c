@@ -9,7 +9,7 @@
  * @ss_str: counter lines
  * Return: error message
  */
-char *strcat_cd(data_shell *ss_data, char *msg, char *error, char *ss_str)
+char *strcat_cd(data_pool *ss_data, char *msg, char *error, char *ss_str)
 {
 	char *illegal_flag;
 
@@ -43,7 +43,7 @@ char *strcat_cd(data_shell *ss_data, char *msg, char *error, char *ss_str)
  * @ss_data: data relevant (directory)
  * Return: Error message
  */
-char *error_get_cd(data_shell *ss_data)
+char *error_get_cd(data_pool *ss_data)
 {
 	int length, len_id;
 	char *error, *ss_str, *msg;
@@ -82,7 +82,7 @@ char *error_get_cd(data_shell *ss_data)
  * @ss_data: data relevant (counter, arguments)
  * Return: Error message
  */
-char *error_not_found(data_shell *ss_data)
+char *error_not_found(data_pool *ss_data)
 {
 	int length;
 	char *error;
@@ -115,7 +115,7 @@ char *error_not_found(data_shell *ss_data)
  *
  * Return: Error message
  */
-char *error_exit_shell(data_shell *ss_data)
+char *error_exit_shell(data_pool *ss_data)
 {
 	int length;
 	char *error;

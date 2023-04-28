@@ -6,7 +6,7 @@
  * @data_st: data structure
  * Return: no return
  */
-void free_data(data_shell *data_st)
+void free_data(data_pool *data_st)
 {
 	unsigned int i;
 
@@ -26,7 +26,7 @@ void free_data(data_shell *data_st)
  * @av: argument vector
  * Return: no return
  */
-void set_data(data_shell *data_st, char **av)
+void set_data(data_pool *data_st, char **av)
 {
 	unsigned int i;
 
@@ -60,7 +60,7 @@ void set_data(data_shell *data_st, char **av)
  */
 int main(int ac, char **av)
 {
-	data_shell data_st;
+	data_pool data_st;
 	(void) ac;
 
 	signal(SIGINT, get_sigint);

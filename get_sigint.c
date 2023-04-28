@@ -1,4 +1,6 @@
 #include "shell.h"
+#include <stdio.h>
+#include <unistd.h>
 
 /**
  * get_sigint - Handle the (ctrl + c) call in prompt
@@ -6,6 +8,11 @@
  */
 void get_sigint(int signal)
 {
+	char *prompt;
+	int length;
 	(void)signal;
-	write(STDOUT_FILENO, "\n#Simple Shell$ ", 15);
+
+	prompt = _strcat(getlogin(), "@shell$ ");
+	length = _strlen(_strcat(getlogin(), "@shell$ "));
+	write(STDOUT_FILENO, prompt, length);
 }

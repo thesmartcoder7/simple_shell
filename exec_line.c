@@ -6,9 +6,9 @@
  * @data: data relevant (args)
  * Return: 1 on success.
  */
-int exec_line(data_shell *data)
+int exec_line(data_pool *data)
 {
-	int (*builtin)(data_shell *data);
+	int (*builtin)(data_pool *data);
 
 	if (data->args[0] == NULL)
 		return (1);

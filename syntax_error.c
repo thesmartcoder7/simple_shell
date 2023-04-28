@@ -101,7 +101,7 @@ int first_char(char *input, int *i)
  * @bool: to control msg error
  * Return: no return
  */
-void syntax_error(data_shell *datash, char *input, int i, int bool)
+void syntax_error(data_pool *datash, char *input, int i, int bool)
 {
 	char *msg, *msg2, *msg3, *error, *counter;
 	int length;
@@ -153,7 +153,7 @@ void syntax_error(data_shell *datash, char *input, int i, int bool)
  * @input: input string
  * Return: 1 if there is an error. 0 in other case
  */
-int check_syntax_error(data_shell *datash, char *input)
+int check_syntax_error(data_pool *datash, char *input)
 {
 	int begin = 0;
 	int f_char = 0;

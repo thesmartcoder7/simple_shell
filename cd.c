@@ -7,7 +7,7 @@
  *
  * Return: no return
  */
-void change_dir_dot(data_shell *data)
+void change_dir_dot(data_pool *data)
 {
 	char pwd[PATH_MAX];
 	char *dir, *cp_pwd, *cp_strtok_pwd;
@@ -58,7 +58,7 @@ void change_dir_dot(data_shell *data)
  * @data: data relevant (directories)
  * Return: no return
  */
-void change_dir_to(data_shell *data)
+void change_dir_to(data_pool *data)
 {
 	char pwd[PATH_MAX];
 	char *dir, *cp_pwd, *cp_dir;
@@ -92,7 +92,7 @@ void change_dir_to(data_shell *data)
  * @data: data relevant (environ)
  * Return: no return
  */
-void change_dir_to_previous(data_shell *data)
+void change_dir_to_previous(data_pool *data)
 {
 	char pwd[PATH_MAX];
 	char *p_pwd, *p_oldpwd, *cp_pwd, *cp_oldpwd;
@@ -134,7 +134,7 @@ void change_dir_to_previous(data_shell *data)
  * @data: data relevant (environ)
  * Return: no return
  */
-void home_directory(data_shell *data)
+void home_directory(data_pool *data)
 {
 	char *p_pwd, *home;
 	char pwd[PATH_MAX];

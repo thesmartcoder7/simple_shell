@@ -5,7 +5,7 @@
  * @ss_data: data relevant (counter, arguments)
  * Return: error message.
  */
-char *error_env(data_shell *ss_data)
+char *error_env(data_pool *ss_data)
 {
 	int length;
 	char *error;
@@ -41,7 +41,7 @@ char *error_env(data_shell *ss_data)
  *
  * Return: The error string.
  */
-char *error_path_126(data_shell *ss_data)
+char *error_path_126(data_pool *ss_data)
 {
 	int length;
 	char *mk_str;
